@@ -334,7 +334,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-article-tag {
-    margin-bottom: 12px;
+    margin-top: 18px;
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -352,6 +352,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-article-image {
     grid-column: main-start / main-end;
     width: 100%;
+    margin-top: 2rem;
 }
 
 .has-wide-image .gh-article-image {
@@ -359,14 +360,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-article-sidebar {
-    position: absolute;
-    left: 0;
-    grid-column: wide-start/main-start;
-    padding-right: 32px;
-}
-
-.has-wide-image .gh-article-sidebar {
-    top: calc(100% + 40px);
+    width: 100%;
 }
 
 .gh-author-image-list {
@@ -698,9 +692,82 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     margin-top: 64px;
 }
 
+.article-container {
+    display: flex;
+
+}
+
+.article-container .gh-article-main {
+    flex: 0 0 calc(100% * 2 / 3);
+}
+
+.article-container .gh-side-bar {
+    flex: 0 0 calc(100% / 3);
+    padding-left: 40px;
+}
+
+
+.article-container .gh-side-bar .gh-card + .gh-card {
+    margin-top: 16px;
+}
+
+.article-container .gh-side-bar .gh-card-link {
+    display: flex;
+}
+
+.article-container .gh-side-bar .gh-card-link .image-container {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-right: 8px;
+}
+
+.article-container .gh-side-bar .gh-card-link .image-container figure {
+    height: 100%;
+}
+
+.article-container .gh-side-bar .gh-card-link .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-container .gh-side-bar .gh-card-link .gh-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-container .gh-side-bar .gh-card-link .gh-card-info * + * {
+    margin-top: 4px;
+}
+
+.article-container .gh-side-bar .gh-card-link .gh-card-info h6 {
+    font-size: 14px;
+}
+
+.article-container .gh-side-bar .gh-card-link .gh-card-info time {
+    display: block;
+    font-size: 12px;
+    color: #00000066;
+}
+
 /* Media queries */
 
 @media (max-width: 767px) {
+    .gh-article-sidebar {
+        display: none;
+        /* position: static;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-column: main-start / main-end;
+        column-gap: 12px;
+        align-items: center;
+        padding-right: 0;
+        margin-top: 24px; */
+    }
+
     .gh-main {
         padding-top: 6.4rem;
         padding-bottom: 6.4rem;
@@ -853,17 +920,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 @media (max-width: 1199px) {
-    .gh-article-sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-column: main-start / main-end;
-        column-gap: 12px;
-        align-items: center;
-        padding-right: 0;
-        margin-top: 24px;
-    }
-
     .gh-article-sidebar .gh-author-image-list {
         grid-row: 1 / 3;
     }

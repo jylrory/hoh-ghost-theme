@@ -79,6 +79,10 @@
             "enter_tag_slugs_for_secondary_sections": {
                 "type": "text",
                 "group": "homepage"
+            },
+            "enter_tag_slug_for_post_siderbar": {
+                "type": "text",
+                "group": "post"
             }
         }
     },

@@ -1,0 +1,13 @@
+{{#is "post"}}
+    <aside class="gh-article-sidebar">
+
+        {{#if @custom.enter_tag_slug_for_post_siderbar}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_slug_for_post_siderbar}}]"}}
+                {{#foreach tags}}
+                    {{> "side-card"}}
+                {{/foreach}}
+            {{/get}}
+        {{/if}}
+
+    </aside>
+{{/is}}
