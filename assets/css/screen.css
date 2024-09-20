@@ -772,19 +772,20 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     width: 100%;
 }
 
+.gh-main {
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
 /* Media queries */
 
 @media (max-width: 767px) {
-    .gh-article-sidebar {
+    .article-container .gh-article-main {
+        flex: 1;
+    }
+
+    .gh-side-bar {
         display: none;
-        /* position: static;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-column: main-start / main-end;
-        column-gap: 12px;
-        align-items: center;
-        padding-right: 0;
-        margin-top: 24px; */
     }
 
     .gh-main {
