@@ -1,8 +1,15 @@
 {{#is "post"}}
     <aside class="gh-article-sidebar">
+        {{#if @custom.enter_tag_slug_for_post_siderbar_1}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_slug_for_post_siderbar_1}}]"}}
+                {{#foreach tags}}
+                    {{> "side-image"}}
+                {{/foreach}}
+            {{/get}}
+        {{/if}}
 
-        {{#if @custom.enter_tag_slug_for_post_siderbar}}
-            {{#get "tags" filter="slug:[{{@custom.enter_tag_slug_for_post_siderbar}}]"}}
+        {{#if @custom.enter_tag_slug_for_post_siderbar_2}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_slug_for_post_siderbar_2}}]"}}
                 {{#foreach tags}}
                     {{> "side-card"}}
                 {{/foreach}}

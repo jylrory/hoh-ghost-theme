@@ -363,6 +363,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     width: 100%;
 }
 
+.gh-article-sidebar .side-card + .side-card {
+    margin-top: 40px;
+}
+
 .gh-author-image-list {
     display: flex;
     margin-left: -2px;
@@ -751,6 +755,21 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     display: block;
     font-size: 12px;
     color: #00000066;
+}
+
+.article-container .gh-side-bar .side-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.article-container .gh-side-bar .side-image-container .gh-card {
+    margin: 0;
+}
+
+.article-container .gh-side-bar .side-image-container .image-container {
+    height: 80px;
+    width: 100%;
 }
 
 /* Media queries */
