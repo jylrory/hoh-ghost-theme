@@ -30,15 +30,27 @@
                     </a>
                     {{#is "home"}}</h1>{{/is}}
                 </div>
-                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                {{!-- <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> --}}
                 <button class="gh-burger"></button>
             </div>
 
             <nav class="gh-head-menu">
                 {{navigation}}
+                {{!-- 下拉菜单 --}}
+                {{#if @custom.enable_multi_navigation}}
+                    <ul class="nav multi-nav">
+                        <li class="submenu-trigger"><a href="#">热门优惠</a>
+                            <ul class="nav submenu">
+                                <li><a href="#">链接1</a></li>
+                                <li><a href="#">链接2</a></li>
+                                <li><a href="#">链接3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                {{/if}}
                 {{#unless @site.members_enabled}}
                     {{#match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                        {{!-- <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> --}}
                     {{/match}}
                 {{/unless}}
             </nav>
@@ -46,10 +58,10 @@
             <div class="gh-head-actions">
                 {{#unless @site.members_enabled}}
                     {{^match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                        {{!-- <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> --}}
                     {{/match}}
                 {{else}}
-                    <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                    {{!-- <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button> --}}
                     <div class="gh-head-members">
                         {{#unless @member}}
                             {{#unless @site.members_invite_only}}

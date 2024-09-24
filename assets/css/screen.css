@@ -777,6 +777,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     padding-right: 36px;
 }
 
+.gh-outer.homepage {
+    padding-top: 4rem;
+}
+
 /* Media queries */
 
 @media (max-width: 767px) {
@@ -967,4 +971,118 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         margin-top: -6px;
         line-height: 1;
     }
+}
+
+/* 导航栏样式 */
+/* .multi-nav {
+    overflow: visible;
+} */
+
+.multi-nav > li {
+    float: left;
+    position: relative; /* 为了定位子菜单 */
+}
+
+.multi-nav > li > a {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* 子菜单样式 */
+.multi-nav .submenu {
+    display: none;
+    position: absolute;
+    top: 48px; /* 下移，使其位于主菜单下方 */
+    left: 20px;
+    min-width: 160px;
+    background: white;
+    box-shadow: 0px 1px 3px 0px #dadada;
+}
+
+.multi-nav .submenu li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.multi-nav .submenu li a:hover {
+    color: var(--ghost-accent-color);
+}
+
+/* 悬停显示子菜单 */
+.multi-nav .submenu-trigger:hover .submenu {
+    display: block;
+}
+
+/* 轮播 */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto 4rem;
+    height: 30rem;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item a:hover {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-button {
+    width: 3.2rem;
+    height: 3.2rem;
+    display: flex;
+    border-radius: 100%;
+}
+
+.carousel-button svg {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-button.prev svg {
+    transform: rotate(180deg);
 }
