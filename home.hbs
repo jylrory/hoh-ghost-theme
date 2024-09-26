@@ -4,19 +4,18 @@
     <div class="gh-inner">
         {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
         {{#if featured}}
-            <div class="carousel">
-                <div class="carousel-track">
+            <div id="main-carousel" class="swiper">
+                <div class="swiper-wrapper">
                     {{#foreach featured}}
-                        <div class="carousel-item">
+                        <div class="swiper-slide">
                             <a href="{{url}}" class="carousel-link">
                                 <img src="{{feature_image}}" alt="{{title}}">
                             </a>
                         </div>
                     {{/foreach}}
                 </div>
-                <!-- 左右箭头 -->
-                <button class="carousel-button prev">{{> "icons/carousel-arrow"}}</button>
-                <button class="carousel-button next">{{> "icons/carousel-arrow"}}</button>
+                <div class="carousel-button swiper-button-prev">{{> "icons/carousel-arrow"}}</div>
+                <div class="carousel-button swiper-button-next">{{> "icons/carousel-arrow"}}</div>
             </div>
         {{/if}}
         {{/get}}

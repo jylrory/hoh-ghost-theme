@@ -1016,73 +1016,43 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 /* 轮播 */
-.carousel {
-    position: relative;
-    overflow: hidden;
+#main-carousel {
     width: 100%;
-    margin: 0 auto 4rem;
     height: 30rem;
+    margin-bottom: 4rem;
 }
 
-.carousel-track {
-    display: flex;
-    height: 100%;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-}
-
-.carousel-item {
-    min-width: 100%;
-}
-
-.carousel-item a:hover {
-    opacity: 1;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+#main-carousel .carousel-button {
     background-color: rgba(0,0,0,0.5);
-    border: none;
     color: white;
-    font-size: 2rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    z-index: 1;
 }
 
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-.carousel-button:hover {
+#main-carousel .carousel-button:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-.carousel-button {
+#main-carousel .swiper-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-carousel .swiper-wrapper .carousel-link:hover {
+    opacity: 1;
+}
+
+#main-carousel .carousel-button {
     width: 3.2rem;
     height: 3.2rem;
     display: flex;
     border-radius: 100%;
 }
 
-.carousel-button svg {
-    width: 100%;
-    height: 100%;
+#main-carousel .carousel-button svg {
+    width: 2rem;
+    height: 2rem;
 }
 
-.carousel-button.prev svg {
+#main-carousel .carousel-button.swiper-button-prev svg {
     transform: rotate(180deg);
 }
