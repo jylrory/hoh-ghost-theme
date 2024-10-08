@@ -1081,13 +1081,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     font-weight: 400;
     margin: 0;
   }
-  .hoh-theme__h2 {
+  h2.hoh-theme__h2 {
     font-size: 15px;
     color: rgb(101, 103, 107);
     font-weight: 700;
     margin: 0;
   }
-  .hoh-theme__h3 {
+  h3.hoh-theme__h3 {
     font-size: 13px;
     margin: 0;
   }
