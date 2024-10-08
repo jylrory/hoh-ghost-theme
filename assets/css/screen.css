@@ -62,7 +62,6 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
 .gh-topic-grid .gh-topic-name {
     margin-bottom: 40px;
     font-size: 2.4rem;
-    text-transform: uppercase;
     letter-spacing: -0.01em;
 }
 
@@ -237,7 +236,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-secondary-text);
-    text-transform: uppercase;
 }
 
 .gh-card:not(.large) .gh-card-footer {
@@ -337,7 +335,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     margin-top: 18px;
     font-size: 1.2rem;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 0.01em;
 }
 
@@ -548,7 +545,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-cover-title {
     font-size: 7.2rem;
     color: var(--color-white);
-    text-transform: uppercase;
     word-break: break-word;
 }
 
@@ -582,7 +578,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .gh-pagehead-title {
     font-size: 2.4rem;
-    text-transform: uppercase;
     letter-spacing: -0.01em;
 }
 
@@ -1091,12 +1086,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     color: rgb(101, 103, 107);
     font-weight: 700;
     margin: 0;
-    text-transform: uppercase;
   }
   .hoh-theme__h3 {
-    font-size: 12px;
+    font-size: 13px;
     margin: 0;
-    text-transform: uppercase;
   }
   .hoh-theme__indent {
     --lexical-indent-base-value: 40px;
