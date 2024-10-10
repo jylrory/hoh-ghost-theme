@@ -481,7 +481,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .gh-article-meta {
-    margin-top: 3px;
     font-size: 1.3rem;
     color: var(--color-secondary-text);
     letter-spacing: -0.003em;
@@ -1017,7 +1016,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     }
 
     .gh-article-meta {
-        margin-top: -6px;
         line-height: 1;
     }
 }
