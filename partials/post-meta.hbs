@@ -3,6 +3,12 @@
 
         <div class="gh-article-meta">
             <div class="gh-article-meta-inner">
+                {{#if primary_author}}
+                    <a href="{{primary_author.url}}">
+                        <span>{{primary_author.name}}</span>
+                    </a>
+                    <span class="gh-article-meta-sep"></span>
+                {{/if}}
                 <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                 {{#if reading_time}}
                     <span class="gh-article-meta-sep"></span>

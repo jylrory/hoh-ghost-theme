@@ -29,9 +29,11 @@
             </h2>
 
             <div class="gh-post-card-container">
-                {{#foreach posts limit="9"}}
-                    {{> "post-card"}}
-                {{/foreach}}
+                {{#get "posts" limit="9" filter="feature_image:-null" include="authors"}}
+                    {{#foreach posts}}
+                        {{> "post-card"}}
+                    {{/foreach}}
+                {{/get}}
             </div>
 
             <footer class="gh-topic-footer">

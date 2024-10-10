@@ -99,13 +99,14 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
 
 .gh-column-card .gh-card-link .gh-card-wrapper .gh-card-author {
     position: relative;
-    margin-right: 5px;
+    margin-right: 4px;
 }
 
 .gh-column-card .gh-card-link .gh-card-wrapper .gh-card-author::after {
     content: '';
-    height: 1px;
-    width: 3px;
+    height: 2px;
+    width: 2px;
+    border-radius: 100%;
     display: inline-block;
     background-color: #00000066;
     position: absolute;
@@ -484,6 +485,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     font-size: 1.3rem;
     color: var(--color-secondary-text);
     letter-spacing: -0.003em;
+}
+
+.gh-article-meta a {
+    color: unset;
 }
 
 .gh-article-meta-inner {

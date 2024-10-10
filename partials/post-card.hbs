@@ -17,7 +17,9 @@
 
         <div class="gh-card-wrapper">
             <h3 class="gh-card-title">{{title}}</h3>
-            <span class="gh-card-author">{{#foreach authors}}{{#if @first}}{{name}}{{else}}, {{name}}{{/if}}{{/foreach}}</span>
+            {{#if primary_author}}
+                <span class="gh-card-author">{{primary_author.name}}</span>
+            {{/if}}
             <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
         </div>
     </a>
