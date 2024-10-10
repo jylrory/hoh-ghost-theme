@@ -71,6 +71,51 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
     gap: 32px 40px;
 }
 
+/* 卡片 */
+
+.gh-topic-grid .gh-post-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 28px 24px;
+}
+
+.gh-post-card-container .gh-column-card .gh-card-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.gh-column-card .gh-card-link .gh-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 16px;
+}
+
+.gh-column-card .gh-card-link .gh-card-wrapper .gh-card-author,
+.gh-column-card .gh-card-link .gh-card-wrapper .gh-card-date {
+    font-size: 1.2rem;
+    color: #00000066;
+}
+
+.gh-column-card .gh-card-link .gh-card-wrapper .gh-card-author {
+    position: relative;
+    margin-right: 5px;
+}
+
+.gh-column-card .gh-card-link .gh-card-wrapper .gh-card-author::after {
+    content: '';
+    height: 1px;
+    width: 3px;
+    display: inline-block;
+    background-color: #00000066;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 3px;
+}
+
+/*  */
+
 body:not(.home-template) .gh-topic-grid .gh-topic-content {
     row-gap: 48px;
     justify-items: center;
@@ -142,6 +187,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     flex-shrink: 0;
     width: 128px;
     height: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .gh-topic-grid .gh-card-image::before {
@@ -716,13 +762,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .article-container .gh-side-bar .gh-card-link .image-container {
     width: 80px;
-    height: 80px;
     flex-shrink: 0;
     margin-right: 8px;
 }
 
 .article-container .gh-side-bar .gh-card-link .image-container figure {
-    height: 100%;
+    /* height: 100%; */
+    aspect-ratio: 16 / 9;
 }
 
 .article-container .gh-side-bar .gh-card-link .image-container img {
@@ -763,7 +809,6 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .article-container .gh-side-bar .side-image-container .image-container {
-    height: 80px;
     width: 100%;
 }
 
@@ -909,6 +954,10 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         grid-template-columns: 1fr;
     }
 
+    .gh-topic-grid .gh-post-card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
     .gh-topic-grid .gh-card.large {
         grid-column: auto;
     }
@@ -1014,7 +1063,8 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 /* 轮播 */
 #main-carousel {
     width: 100%;
-    height: 30rem;
+    max-height: 30rem;
+    aspect-ratio: 16/9;
     margin-bottom: 4rem;
 }
 
