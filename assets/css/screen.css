@@ -74,6 +74,41 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
     gap: 32px 40px;
 }
 
+/* Header */
+@media (max-width: 767px) {
+    #gh-head .gh-head-inner {
+        gap: 0;
+    }
+
+    #gh-head .gh-head-actions, #gh-head .gh-head-menu {
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100%;
+        
+    }
+
+    #gh-head .nav {
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    #gh-head .nav a {
+        font-weight: 400;
+    }
+
+    .is-head-open #gh-head .nav li:first-child {
+        border-top: 1px solid var(--color-light-gray);
+    }
+
+    .is-head-open #gh-head .nav li {
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid var(--color-light-gray);
+    }
+}
+/* *** */
+
 /* 卡片 */
 
 .gh-topic-grid .gh-post-card-container {
@@ -118,7 +153,7 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
     margin: auto 0 auto 3px;
 }
 
-/*  */
+/* *** */
 
 body:not(.home-template) .gh-topic-grid .gh-topic-content {
     row-gap: 48px;
