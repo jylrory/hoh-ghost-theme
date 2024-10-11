@@ -59,7 +59,7 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
 /* Styles specific to grid style sections */
 
 .gh-topic-grid + .gh-topic-grid {
-    margin-top: 80px;
+    margin-top: 16px;
 }
 
 .gh-topic-grid .gh-topic-name {
@@ -95,6 +95,7 @@ body:is(.is-head-transparent, .is-head-brand, .is-head-dark) .gh-head-logo img +
 
     #gh-head .nav a {
         font-weight: 400;
+        font-size: 1.6rem;
     }
 
     .is-head-open #gh-head .nav li:first-child {
@@ -934,13 +935,17 @@ body:not(.home-template) .gh-topic-grid .gh-card {
         display: none;
     }
 
+    .gh-topic-grid .gh-card .gh-card-excerpt {
+        display: none;
+    }
+
     .gh-card:not(.large) .gh-card-footer {
         margin-top: 8px;
     }
 
-    .gh-topic-grid .gh-card:not(.large) :where(.gh-card-author, .gh-card-footer-sep) {
+    /* .gh-topic-grid .gh-card:not(.large) :where(.gh-card-author, .gh-card-footer-sep) {
         display: none;
-    }
+    } */
 
     .gh-topic-minimal .gh-card + .gh-card {
         margin-top: 12px;
@@ -1173,13 +1178,13 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     margin: 0;
   }
   h2.hoh-theme__h2 {
-    font-size: 15px;
+    font-size: 24px;
     color: rgb(101, 103, 107);
     font-weight: 700;
     margin: 0;
   }
   h3.hoh-theme__h3 {
-    font-size: 13px;
+    font-size: 16px;
     margin: 0;
   }
   .hoh-theme__indent {
