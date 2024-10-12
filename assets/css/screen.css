@@ -1121,6 +1121,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     max-height: 30rem;
     aspect-ratio: 16/9;
     margin-bottom: 4rem;
+    overflow: hidden;
 }
 
 #main-carousel .carousel-button {
