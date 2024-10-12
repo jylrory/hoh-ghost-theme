@@ -864,6 +864,11 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     padding-top: 4rem;
 }
 
+.gh-head {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
 /* Media queries */
 
 @media (max-width: 767px) {
