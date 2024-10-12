@@ -29,7 +29,9 @@
                         {{/if}}
                         <div class="gh-card-info">
                             <h6 class="gh-card-title">{{title}}</h6>
-                            <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                            <time class="gh-article-date" datetime="{{updated_at}}" title="{{updated_at}}">
+                                {{date updated_at format="YYYY-MM-DD"}}
+                            </time>
                         </div>
                     </a>
                 </article>

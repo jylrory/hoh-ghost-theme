@@ -7,7 +7,10 @@
                 </a>
                 <span class="gh-article-meta-sep"></span>
             {{/if}}
-            <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            {{!-- <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time> --}}
+            <time class="gh-article-date" datetime="{{updated_at}}" title="{{updated_at}}">
+                {{date updated_at format="YYYY-MM-DD"}}
+            </time>
             {{#if reading_time}}
                 <span class="gh-article-meta-sep"></span>
                 <span class="gh-article-length">{{reading_time minute="1 min" minutes="% min"}}</span>
