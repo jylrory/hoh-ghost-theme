@@ -1,4 +1,10 @@
 {
     "editor.wordWrap": "off",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "cSpell.words": [
+        "pagehead",
+        "Strikethrough",
+        "swiper",
+        "tryghost"
+    ]
 }
